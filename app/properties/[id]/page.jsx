@@ -1,6 +1,11 @@
+'use client'
+
 const PropertyPage = () => {
+
   return (
-    <div>PropertyPage</div>
+    <div>
+      PropertyPage
+    </div>
   )
 }
 
