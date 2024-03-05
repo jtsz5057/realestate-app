@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section className="bg-blue-700 py-20 mb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div class="text-center">
+        <div className="text-center">
           <h1 className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
             Find The Perfect Rental
           </h1>
@@ -25,7 +25,7 @@ const Hero = () => {
             />
           </div>
           <div className="w-full md:w-2/5 md:pl-2">
-            <label htmlFor="property-type" class="sr-only">Property Type</label>
+            <label htmlFor="property-type" className="sr-only">Property Type</label>
             <select
               id="property-type"
               className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500"
