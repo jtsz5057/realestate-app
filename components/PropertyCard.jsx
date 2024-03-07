@@ -1,7 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const PropertyCard = () => {
+const PropertyCard = ({ property }) => {
+  const getRateDisplay = () => {
+    const { rates } = property;
+
+    if (rates.monthly) {
+      return `${rates.monthly.toLocaleString()}/mo`;
+    } else if (rates.weekly) {
+      return `${rates.weekly.toLocaleString()}/wk`;
+    } else if (rates.nightly) {
+      return `${rates.nightly.toLocaleString()}/night`;
+    }
+  }
+
   return (
     <div className="rounded-xl shadow-md relative">
         <Image
@@ -14,13 +26,13 @@ const PropertyCard = () => {
         />
         <div className="p-4">
             <div className="text-left md:text-center lg:text-left mb-6">
-                <div className="text-gray-600">Apartment</div>
-                    <h3 className="text-xl font-bold">Boston Commons Retreat</h3>
+                <div className="text-gray-600">{property.type}</div>
+                    <h3 className="text-xl font-bold">{property.name}</h3>
                 </div>
               <h3
                 className="absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right"
               >
-                $4,200/mo
+                ${getRateDisplay()}
               </h3>
 
               <div className="flex justify-center gap-4 text-gray-500 mb-4">
