@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { fetchProperty } from "@/utils/requests";
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
+import Link from "next/link";
+import { FaArrowLeft } from 'react-icons/fa'
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -40,6 +42,16 @@ const PropertyPage = () => {
     <>
       {!loading && property && (<>
         <PropertyHeaderImage image={ property.image[0]}/>
+        <section>
+          <div className="container m-auto py-6 px-6">
+            <Link
+              href="/properties.html"
+              className="text-blue-500 hover:text-blue-600 flex items-center"
+            >
+              <FaArrowLeft className="mr-2"/> Back to Properties
+            </Link>
+          </div>
+        </section>
       </>)}
     </>
   )
