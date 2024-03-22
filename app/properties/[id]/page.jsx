@@ -5,6 +5,7 @@ import { fetchProperty } from "@/utils/requests";
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
 import Link from "next/link";
 import { FaArrowLeft } from 'react-icons/fa'
+import PropertyDetails from "@/components/PropertyDetails";
 
 const PropertyPage = () => {
   const { id } = useParams();
