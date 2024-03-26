@@ -1,4 +1,11 @@
-import React from 'react'
+import {
+  FaBed,
+  FaBath,
+  FaRulerCombined,
+  FaTimes,
+  FaCheck,
+  FaMapMarker
+ } from 'react-icons/fa'
 
 const PropertyDetails = ({ property }) => {
 
@@ -8,6 +15,7 @@ const PropertyDetails = ({ property }) => {
         <div className="text-gray-500 mb-4">Apartment</div>
         <h1 className="text-3xl font-bold mb-4">Boston Commons Retreat</h1>
         <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
+          <FaMapMarker className='text-lg text-orange-700 mr-2'/>
           <i className="fa-solid fa-location-dot text-lg text-orange-700 mr-2"></i>
             <p className="text-orange-700">
                120 Tremont Street Boston, MA 02111
@@ -39,15 +47,15 @@ const PropertyDetails = ({ property }) => {
           <h3 className="text-lg font-bold mb-6">Description & Details</h3>
           <div className="flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9">
             <p>
-              <i className="fa-solid fa-bed"></i> 3
+              <FaBed className='inline-block mr-2'/> 3
               <span className="hidden sm:inline">Beds</span>
             </p>
             <p>
-              <i className="fa-solid fa-bath"></i> 2
+              <FaBath className='inline-block mr-2'/> 2
               <span className="hidden sm:inline">Baths</span>
             </p>
             <p>
-              <i className="fa-solid fa-ruler-combined"></i>
+              <FaRulerCombined className='inline-block mr-2'/>
                1,500 
                <span className="hidden sm:inline">sqft</span>
             </p>
