@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PropertyDetails = () => {
+const PropertyDetails = ({ property }) => {
 
   return (
     <main>
